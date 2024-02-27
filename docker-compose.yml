@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  scan_tgbot:
+    container_name: "scanner_aio3_tgbot"
+    build:
+      context: .
+    command: python bot.py
+    networks:
+      - botnet
+    restart: always
+    env_file:
+      - ".env"
+    volumes:
+      - .:/src
+    privileged: true
+
+networks:
+  botnet:
+    driver: bridge
