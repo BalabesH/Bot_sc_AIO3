@@ -1,13 +1,10 @@
 import logging
 from aiogram import Router, F
-from aiogram.types import Message, ReplyKeyboardRemove
-from aiogram.methods.get_file import GetFile
+from aiogram.types import Message
 from filters.chat_type import ChatTypeFilter
 from filters.user_id import IsUser
 from middlewire.middlewares import SlowpokeMiddleware
-from utils.f_service_bot_pgsql import f_user_ids
 from utils.f_scaner_api import f_logging, SendData, Locations
-from aiogram.types.location import Location
 from PIL import Image
 from utils.f_service_bot_pgsql import f_logging
 import io
@@ -95,21 +92,3 @@ async def pure_answer(message: Message):
     else:
         await message.answer(f"Я ожидаю от тебя фото или текст номером штрих-кода/артикула!")
         await message.answer_sticker(sticker='CAACAgIAAxkBAAELDiNljSmXUFfwxzXdS3RZ9TpRPWInKAACYgADto9KCd3ChcBO_xDIMwQ')
-
-# @router.message(F.content_type == 'location', F.from_user.id.in_(f_user_ids()))
-# async def check_loc(message: Message):
-#     if message.location is not None:
-#         latitude = message.location.latitude
-#         longitude = message.location.longitude
-#         f_upd_loc(message.chat.id,latitude,longitude)
-#         loc = f_get_loc(message.chat.id)
-#     await message.answer(f"Если местоположение не определено, выставлю 001 : изменено на {loc}")
-#     await message.answer("Пришли фото со ШК", parse_mode="Markdown")
-
-# @router.message(F.content_type.in_({'photo', 'sticker', 'video', 'audio','pinned_message'}), F.from_user.id.in_(f_user_ids()))
-# async def check_art (message: Message):
-#     await message.answer(f"Я все еще жду фото или текст со штрих-кодом!")
-#     await message.answer_sticker(sticker='CAACAgIAAxkBAAELDiNljSmXUFfwxzXdS3RZ9TpRPWInKAACYgADto9KCd3ChcBO_xDIMwQ')
-
-# # @router.message(F.from_user.id.in_(f_user_ids()))
-# # async def location()

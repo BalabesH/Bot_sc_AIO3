@@ -4,7 +4,6 @@ import json
 
 # подключаем posgr
 import psycopg2 as PG
-from psycopg2 import sql
 from config.config import db_pgdev
 
 
@@ -349,85 +348,3 @@ def f_setup_json2(p_notifier_id):
         return rows[0][0]
     except PG.Error as err:
         logging.exception("f_setup_json: Query error: {}".format(err))
-
-# import F_TELEGRAM_MESSAGE as F_TELEGRAM_MESSAGE
-#
-# queue,notifier_ids = f_queue()
-# logging.info(type(queue))
-# logging.info(queue)
-# logging.info(type(queue))
-# logging.info(notifier_ids)
-# #потоки в процессе
-# if queue is None:
-#     logging.info('type')
-# else:
-#     #потоки начали выполнение
-#     f_out_statuses(p_notifier_ids=notifier_ids,p_status=-1)
-#     for rep in queue:
-#         logging.info(rep)
-#         v_report = F_TELEGRAM_MESSAGE.f_message_header(p_header='Статусы')
-#         v_report += F_TELEGRAM_MESSAGE.f_message_format_table(rep['report_json'])
-#         logging.info(v_report)
-#     #потоки в выполнены
-#     f_out_statuses(p_notifier_ids=notifier_ids,p_status=2)
-# сброс уведомления для отправки
-
-#
-# import F_TELEGRAM_MESSAGE as F_TELEGRAM_MESSAGE
-#
-# q=f_queue()
-# logging.info(type(q))
-# report_json=[]
-# v_dict={}
-# logging.info('0 - '+str(q))
-# for i in q:
-#     logging.info('1 - '+str(i))
-#     logging.info(type(i))
-#     #logging.info(i['user_id'])
-#     for z in i:
-#         logging.info('2 - '+str(z))
-#         logging.info(z['user_id'])
-#         logging.info(z['report_json'])
-#         logging.info(F_TELEGRAM_MESSAGE.f_message_format_table(z['report_json']))
-#         #logging.info(z['report_json'])
-#         #for x in z['report_json']:
-#             #logging.info('3 - '+str(x))
-#             #v_dict[x['FLOW']]= str(x['IS_ERROR'])
-#             #report_json.append(v_dict)
-#             #logging.info(F_TELEGRAM_MESSAGE.f_message_format_table(v_dict))
-# #logging.info(v_dict)
-
-
-# # тест
-# def f_test():
-#     try:
-#         with con.cursor() as cursor:
-#             cursor.execute(
-#                 "select setup_json ,setup_json->>'SETUP' AS title from chat_bot_prod.setup_notifier"
-#             )
-#             logging.info(cursor.fetchall())
-#         cursor.close()
-#     except PG.Error as err:
-#         logging.info("Query error: {}".format(err))
-#     return
-
-# # #Сохраняем данные в лог
-# # try:
-# #     f_log(1,'{"146.240.224.143": "running", "146.240.224.144": "running"}', 0, 1)
-# # except pgdb.Error as err:
-# #     logging.info("Query error: {}".format(err))
-#
-# seq = f_seq_execution_id()
-# logging.info (seq)
-#
-# #Сохраняем данные в лог
-# try:
-#     f_test()
-# except pg.Error as err:
-#     logging.info("Query error: {}".format(err))
-#
-# f_start_update_setup_notifier(1,seq)
-#
-# f_finish_update_setup_notifier(1,seq,0)
-#
-# f_logging_notifier(1, 1,None,1, 'start job')

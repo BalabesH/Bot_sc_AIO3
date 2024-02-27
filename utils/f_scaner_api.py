@@ -1,7 +1,5 @@
-from datetime import datetime
 from pyzbar import pyzbar
 import numpy as np
-from PIL import Image, ExifTags
 import pandas.io.sql as sqlio
 import oracledb
 from misc.logging import logging

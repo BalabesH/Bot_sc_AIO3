@@ -1,5 +1,4 @@
 from misc.logging import logging
-# подключаем posgr
 import psycopg2 as PG
 from psycopg2 import sql
 from config.config import db_pgdev

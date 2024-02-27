@@ -15,7 +15,7 @@ bot = Bot(token=config.bot_token, parse_mode="HTML")
 
 # storage = MemoryStorage()
 # Диспетчер
-dp = Dispatcher(maintenance_mode=False)#при обслуживании функционала maintenance_mode=True
+dp = Dispatcher(maintenance_mode=False)#if maintenance_mode=True bot worked but user cannot use any func
 # dp = Dispatcher(storage=storage)
 # dp.callback_query.middleware(
 #     CallbackAnswerMiddleware(pre=True, text="Готово!", show_alert=True))
