@@ -1,10 +1,14 @@
+from email import message
+from filters import chat_type
 from misc.logging import logging
 import psycopg2 as PG
 from psycopg2 import sql
 from config.config import db_pgdev
+from  aiogram.types.chat import Chat
 
 # json
 import jsonpickle
+import json
 
 #########################CONNECT TO PG########################################
 def PG_connect():
@@ -17,16 +21,28 @@ def PG_connect():
     return con_pg
 
 # логирование
-def f_logging(message_id, chat_id, content_type, from_user_id, date_id, text_, message):
+# (message.message_id, message.chat.id, message.chat.type, message.content_type, message.from_user.id,
+#                                   message.date, message.text,
+#                                   message.location)
+# CREATE TABLE chat_bot_prod.logs_bot(
+#     from_user_id bigint,
+#     message jsonb,
+#     text_ varchar,
+#     message_id numeric,
+#     date_dt timestamp without time zone
+
+def f_logging(from_user_id, chat_id, chat_type, content_type, location, text_, message_id, date_dt):
     logging.info("f_logging: Start")
     try:
         with PG_connect().cursor() as cursor:
+            # metadata = jsonpickle.encode(message)
+            message = {"chat_id": chat_id, "chat_type": chat_type, "content type": content_type, "location": str(location)}
             values = [
-                (message_id, chat_id, content_type, from_user_id, date_id, text_, jsonpickle.encode(f"{message.location} {message_id}"))
+                (from_user_id, json.dumps(message), text_, message_id, date_dt)
             ]
             logging.info(values)
             insert = sql.SQL(
-                'INSERT INTO chat_bot_prod.log_bot (message_id,chat_id, content_type, from_user_id, date_dt,text_,message) VALUES {}').format(
+                'INSERT INTO chat_bot_prod.logs_bot (from_user_id, message, text_, message_id, date_dt) VALUES {}').format(
                 sql.SQL(',').join(map(sql.Literal, values))
             )
             cursor.execute("rollback")
@@ -37,6 +53,10 @@ def f_logging(message_id, chat_id, content_type, from_user_id, date_id, text_, m
         logging.exception("f_user_check_phone: Query error: {}".format(err))
         with PG_connect().cursor() as cursor:
             cursor.execute("rollback")
+
+# (message.message_id, message.chat.id, message.chat.type, message.content_type, message.from_user.id,
+#                                   message.date, message.text,
+#                                   message.location)
 
 # проверка юзера по номеру телефона
 def f_user_check_phone(phone_number):

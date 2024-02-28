@@ -4,7 +4,7 @@ from aiogram.types import Message
 from filters.chat_type import ChatTypeFilter
 from filters.user_id import IsUser
 from middlewire.middlewares import SlowpokeMiddleware
-from utils.f_scaner_api import f_logging, SendData, Locations
+from utils.f_scaner_api import SendData, Locations, scan_logging
 from PIL import Image
 from utils.f_service_bot_pgsql import f_logging
 import io
@@ -13,7 +13,7 @@ import os
 from aiogram.enums import ParseMode
 
 router = Router()
-router.message.middleware(SlowpokeMiddleware(sleep_sec=2))
+router.message.middleware(SlowpokeMiddleware(sleep_sec=1))
 router.message.filter(IsUser(), ChatTypeFilter(chat_type=["private"]))
 
 @router.message(F.location)
@@ -21,25 +21,28 @@ async def loc_user(message: Message):
     Locations.f_upd_loc(message.chat.id,message.location.latitude,message.location.longitude)
     loc = Locations.f_get_loc(message.chat.id)
     await message.answer(f"Если местоположение не определено, выставлю 001 : изменено на {loc}")
-    f_logging(message.message_id, message.chat.id, message.content_type, message.from_user.id,
-                                  message.date, message.text,
-                                  message)
+    f_logging(message.from_user.id,  message.chat.id,
+              message.chat.type, message.content_type,
+              message.location, message.text,
+              message.message_id, message.date)
     await message.answer(f"Теперь можно отправить фото штрих-кода или ввести номер штрихкода сообщением")
 
 @router.message(F.text.lower() == "сканер")
 async def message_scan(message: Message):
     loc = Locations.f_get_loc(message.chat.id)
     await message.reply(f"Местоположение - {loc} -  Измени, нажав на \U0001F310 \nили жми на \U0001F4CE - пришли фото со ШК")
-    f_logging(message.message_id, message.chat.id, message.content_type, message.from_user.id,
-                                  message.date, message.text,
-                                  message)
+    f_logging(message.from_user.id,  message.chat.id,
+              message.chat.type, message.content_type,
+              message.location, message.text,
+              message.message_id, message.date)
 
 @router.message(F.text.lower() == "информация")
 async def message_with_info(message: Message):
     await message.answer(f"Слово/кнопка 'сканер' - покажет, какой магазин сейчас выбран. \nКнопка \U0001F310 - изменит магазин по геолокации. \n\nНажав на \U0001F4CE - сфотографируй ШК. \nЕсли сфотографировать не получается, напиши ШК")
-    f_logging(message.message_id, message.chat.id, message.content_type, message.from_user.id,
-                                  message.date, message.text,
-                                  message)
+    f_logging(message.from_user.id,  message.chat.id,
+              message.chat.type, message.content_type,
+              message.location, message.text,
+              message.message_id, message.date)
 
 @router.message(F.content_type.in_({'text', 'sticker', 'pinned_message', 'photo', 'audio', 'document'}))
 async def pure_answer(message: Message):
@@ -62,8 +65,11 @@ async def pure_answer(message: Message):
         if answ[0] == 'Штрихкод не найден!\nПопробуй сделать другое фото или отправь ШК сообщением.':
             return
         else:
-            f_logging(message.chat.id,answ[1],answ[6])
+            scan_logging(message.chat.id,answ[1],answ[6])
             logging.info(f"Получил файл и обработал")
+        f_logging(message.message_id, message.chat.id,  message.chat_type, message.content_type, message.from_user.id,
+                                  message.date, message.text,
+                                  message.location)
     elif message.content_type == 'text':
         if message.text.isdigit():
             ########Обработка EAN############
@@ -86,9 +92,15 @@ async def pure_answer(message: Message):
             if answ[0] == 'Штрихкод не найден!\nПроверь':
                 return
             else:
-                f_logging(message.chat.id,answ[1],answ[6])
+                scan_logging(message.chat.id,answ[1],answ[6])
         else:
-           await message.answer(f"""Код артикула/штрих-кода не распознан, проверьте правильность кода и попробуйте снова""")
+            await message.answer(f"""Код артикула/штрих-кода не распознан, проверьте правильность кода и попробуйте снова""")
+        f_logging(message.message_id, message.chat.id,  message.chat_type, message.content_type, message.from_user.id,
+                                message.date, message.text,
+                                message.location)
     else:
         await message.answer(f"Я ожидаю от тебя фото или текст номером штрих-кода/артикула!")
         await message.answer_sticker(sticker='CAACAgIAAxkBAAELDiNljSmXUFfwxzXdS3RZ9TpRPWInKAACYgADto9KCd3ChcBO_xDIMwQ')
+        f_logging(message.message_id, message.chat.id,  message.chat_type, message.content_type, message.from_user.id,
+                                message.date, message.text,
+                                message.location)

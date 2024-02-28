@@ -33,6 +33,10 @@ async def any_callback(callback: CallbackQuery):
         show_alert=True
     )
 
+@dp.message(F.text == 'test')
+async def test(message: Message):
+    await message.answer(f"Your annot: {message.content_type}")
+
 # Запуск бота
 @logger.catch
 async def main() -> None:

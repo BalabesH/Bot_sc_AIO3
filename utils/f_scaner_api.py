@@ -17,7 +17,7 @@ def SMART_connect():
     return con_exa
 
 #logging
-def f_logging(user_id,dcode,shop):
+def scan_logging(user_id,dcode,shop):
 	con = SMART_connect()
 	try:
 		with con.cursor() as cursor:
