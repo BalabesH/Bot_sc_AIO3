@@ -11,9 +11,10 @@ router.message.filter(ChatTypeFilter(chat_type=["private"]))
 # take number
 @router.message(F.contact.phone_number)
 async def check_phone_number(message: Message):
-    f_logging(message.message_id, message.chat.id, message.content_type, message.from_user.id,
-                                  message.date, message.text,
-                                  message)
+    f_logging(from_user_id=message.from_user.id, chat_id=message.chat.id,
+              chat_type=message.chat.type, content_type=message.content_type,
+              text_=message.text,
+              message_id=message.message_id, date_dt=message.date)
     await message.reply("Проверка доступа")
     user_check_phone = f_user_check_phone(message.contact.phone_number)
     if user_check_phone == 1:
@@ -27,8 +28,9 @@ async def check_phone_number(message: Message):
 
 @router.message()
 async def unreg_user(message: Message):
-    f_logging(message.message_id, message.chat.id, message.content_type, message.from_user.id,
-                                  message.date, message.text,
-                                  message)
+    f_logging(from_user_id=message.from_user.id, chat_id=message.chat.id,
+              chat_type=message.chat.type, content_type=message.content_type,
+              text_=message.text,
+              message_id=message.message_id, date_dt=message.date)
     await message.answer("В доступе отказано. Отправьте заявку на IT@auchan.ru📧", reply_markup= get_phone())
     logging.info(f"{message}")

@@ -1,6 +1,8 @@
 from typing import Callable, Dict, Any, Awaitable
 from aiogram import BaseMiddleware
-from aiogram.types import TelegramObject
+from aiogram.types import TelegramObject, Message
+from aiogram.dispatcher.flags import get_flag
+from aiogram.utils.chat_action import ChatActionSender
 import asyncio
 
 class SomeMiddleware(BaseMiddleware):

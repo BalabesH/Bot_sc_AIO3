@@ -547,3 +547,1325 @@ Traceback (most recent call last):
   File "C:\Users\RU20046792\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 179, in default
     raise TypeError(f'Object of type {o.__class__.__name__} '
 TypeError: Object of type Location is not JSON serializable
+2024-02-28 18:28:08,248 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532622 by bot id=5300290217
+TypeError: f_logging() missing 2 required positional arguments: 'message_id' and 'date_dt'
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 35, in message_scan
+    f_logging(message.from_user.id,  message.chat.id,
+TypeError: f_logging() missing 2 required positional arguments: 'message_id' and 'date_dt'
+2024-02-28 18:29:38,967 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532623 by bot id=5300290217
+AttributeError: 'NoneType' object has no attribute 'longitude'
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 37, in message_scan
+    message.location.longitude, message.location.latitude,
+AttributeError: 'NoneType' object has no attribute 'longitude'
+2024-02-28 18:30:46,766 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532625 by bot id=5300290217
+TypeError: f_logging() missing 1 required positional argument: 'date_dt'
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 44, in message_with_info
+    f_logging(message.from_user.id,  message.chat.id,
+TypeError: f_logging() missing 1 required positional argument: 'date_dt'
+2024-02-28 18:31:45,302 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532626 by bot id=5300290217
+AttributeError: 'NoneType' object has no attribute 'longitude'
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 37, in message_scan
+    message.location.longitude, message.location.latitude,
+AttributeError: 'NoneType' object has no attribute 'longitude'
+2024-02-29 16:33:35,660 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532631 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 97, in pure_answer
+    scan_logging(message.chat.id,answ[1],answ[6])
+IndexError: list index out of range
+2024-02-29 16:57:40,145 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532632 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 97, in pure_answer
+    scan_logging(message.chat.id,answ[1],answ[6])
+IndexError: list index out of range
+2024-02-29 16:57:53,223 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532633 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 69, in pure_answer
+    scan_logging(message.chat.id,answ[1],answ[6])
+IndexError: list index out of range
+2024-03-01 17:03:53,767 - [ERROR] - root - (f_scaner_api.py).f_upd_loc(255) - Возникло исключение ORA-00942: table or view does not exist
+Help: https://docs.oracle.com/error-help/db/ora-00942/
+Traceback (most recent call last):
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\utils\f_scaner_api.py", line 251, in f_upd_loc
+    cursor.execute(v_sql)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\oracledb\cursor.py", line 743, in execute
+    impl.execute(self)
+  File "src\\oracledb\\impl/thin/cursor.pyx", line 173, in oracledb.thin_impl.ThinCursorImpl.execute
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 425, in oracledb.thin_impl.Protocol._process_single_message
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 426, in oracledb.thin_impl.Protocol._process_single_message
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 419, in oracledb.thin_impl.Protocol._process_message
+oracledb.exceptions.DatabaseError: ORA-00942: table or view does not exist
+Help: https://docs.oracle.com/error-help/db/ora-00942/
+2024-03-01 17:06:02,224 - [ERROR] - root - (f_scaner_api.py).f_upd_loc(255) - Возникло исключение ORA-00942: table or view does not exist
+Help: https://docs.oracle.com/error-help/db/ora-00942/
+Traceback (most recent call last):
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\utils\f_scaner_api.py", line 251, in f_upd_loc
+    cursor.execute(v_sql)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\oracledb\cursor.py", line 743, in execute
+    impl.execute(self)
+  File "src\\oracledb\\impl/thin/cursor.pyx", line 173, in oracledb.thin_impl.ThinCursorImpl.execute
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 425, in oracledb.thin_impl.Protocol._process_single_message
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 426, in oracledb.thin_impl.Protocol._process_single_message
+  File "src\\oracledb\\impl/thin/protocol.pyx", line 419, in oracledb.thin_impl.Protocol._process_message
+oracledb.exceptions.DatabaseError: ORA-00942: table or view does not exist
+Help: https://docs.oracle.com/error-help/db/ora-00942/
+2024-03-01 17:07:06,663 - [ERROR] - root - (f_scaner_api.py).f_upd_loc(255) - Возникло исключение relation "dual" does not exist
+LINE 6:           and IS_ACTIVE=1),'001') from dual)
+                                               ^
+Traceback (most recent call last):
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\utils\f_scaner_api.py", line 251, in f_upd_loc
+    cursor.execute(v_sql)
+psycopg2.errors.UndefinedTable: relation "dual" does not exist
+LINE 6:           and IS_ACTIVE=1),'001') from dual)
+                                               ^
+
+2024-03-01 17:07:22,910 - [ERROR] - root - (f_scaner_api.py).f_upd_loc(255) - Возникло исключение relation "dual" does not exist
+LINE 6:           and IS_ACTIVE=1),'001') from dual)
+                                               ^
+Traceback (most recent call last):
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\utils\f_scaner_api.py", line 251, in f_upd_loc
+    cursor.execute(v_sql)
+psycopg2.errors.UndefinedTable: relation "dual" does not exist
+LINE 6:           and IS_ACTIVE=1),'001') from dual)
+                                               ^
+
+2024-03-01 17:34:00,517 - [ERROR] - root - (f_scaner_api.py).f_upd_loc(255) - Возникло исключение relation "dual" does not exist
+LINE 6:           and IS_ACTIVE=1),'001') from dual)
+                                               ^
+Traceback (most recent call last):
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\utils\f_scaner_api.py", line 251, in f_upd_loc
+    cursor.execute(v_sql)
+psycopg2.errors.UndefinedTable: relation "dual" does not exist
+LINE 6:           and IS_ACTIVE=1),'001') from dual)
+                                               ^
+
+2024-03-04 16:37:22,632 - [ERROR] - root - (f_scaner_api.py).f_upd_loc(255) - Возникло исключение operator does not exist: numeric ~~ text
+LINE 4:           where LATITUDE like ''||trunc(54.964103,1)||'%'
+                                 ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+Traceback (most recent call last):
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\utils\f_scaner_api.py", line 251, in f_upd_loc
+    cursor.execute(v_sql)
+psycopg2.errors.UndefinedFunction: operator does not exist: numeric ~~ text
+LINE 4:           where LATITUDE like ''||trunc(54.964103,1)||'%'
+                                 ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+2024-03-05 10:39:01,838 - [ERROR] - root - (f_scaner_api.py).f_upd_loc(262) - Возникло исключение operator does not exist: numeric ~~ text
+LINE 4:           where LATITUDE like ''||trunc(54.962781,1)||'%'
+                                 ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+Traceback (most recent call last):
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\utils\f_scaner_api.py", line 258, in f_upd_loc
+    cursor.execute(v_sql)
+psycopg2.errors.UndefinedFunction: operator does not exist: numeric ~~ text
+LINE 4:           where LATITUDE like ''||trunc(54.962781,1)||'%'
+                                 ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+2024-03-05 17:16:32,543 - [ERROR] - root - (f_scaner_api.py).f_upd_loc(265) - Возникло исключение syntax error at or near "select"
+LINE 2:         set LOCATION =select COALESCE((
+                              ^
+Traceback (most recent call last):
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\utils\f_scaner_api.py", line 261, in f_upd_loc
+    cursor.execute(v_sql)
+psycopg2.errors.SyntaxError: syntax error at or near "select"
+LINE 2:         set LOCATION =select COALESCE((
+                              ^
+
+2024-03-05 20:33:40,824 - [ERROR] - root - (testzone.py).f_get_loc(29) - Возникло исключение column "object_org_name" does not exist
+LINE 1: select LOCATION, object_org_name from chat_bot_prod.setup_sc...
+                         ^
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\testzone.py", line 26, in f_get_loc
+    cursor.execute(v_sql)
+psycopg2.errors.UndefinedColumn: column "object_org_name" does not exist
+LINE 1: select LOCATION, object_org_name from chat_bot_prod.setup_sc...
+                         ^
+
+2024-03-06 15:15:55,603 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532654 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 70, in pure_answer
+    scan_logging(message.chat.id,answ[1],answ[6])
+IndexError: list index out of range
+2024-03-06 15:18:05,460 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532655 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 69, in pure_answer
+    logging.info(f"{answ},{answ[6]}")
+IndexError: list index out of range
+2024-03-06 15:18:45,382 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532656 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 69, in pure_answer
+    logging.info(f"{answ[1]},{answ[6]}")
+IndexError: list index out of range
+2024-03-06 15:25:59,986 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 64] Указанное сетевое имя более недоступно
+2024-03-06 15:25:59,986 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 5300290217)
+2024-03-06 15:26:03,680 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532657 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 69, in pure_answer
+    logging.info(f"{answ},\n{answ[1]}, {answ[6]}")
+IndexError: list index out of range
+2024-03-06 15:32:15,103 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532658 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 69, in pure_answer
+    logging.info(f"{answ},{answ[6]}")
+IndexError: list index out of range
+2024-03-06 15:34:52,652 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532659 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 69, in pure_answer
+    logging.info(f"{answ},{answ[1]}")
+IndexError: list index out of range
+2024-03-06 15:38:21,456 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532660 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 69, in pure_answer
+    print(f"{answ},{answ[1]}")
+IndexError: list index out of range
+2024-03-06 16:11:50,123 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532661 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 71, in pure_answer
+    scan_logging(message.chat.id,answ[1],answ[6])
+IndexError: list index out of range
+2024-03-07 12:07:37,202 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2024-03-07 12:07:37,214 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 5300290217)
+2024-03-07 12:08:11,996 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:08:12,000 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 1.220170 seconds and try again... (tryings = 1, bot id = 5300290217)
+2024-03-07 12:08:32,529 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:08:32,534 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 1.605454 seconds and try again... (tryings = 2, bot id = 5300290217)
+2024-03-07 12:08:53,434 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:08:53,436 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 2.072210 seconds and try again... (tryings = 3, bot id = 5300290217)
+2024-03-07 12:09:14,826 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:09:14,831 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 2.732259 seconds and try again... (tryings = 4, bot id = 5300290217)
+2024-03-07 12:09:36,879 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:09:36,881 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 3.576510 seconds and try again... (tryings = 5, bot id = 5300290217)
+2024-03-07 12:09:59,737 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:09:59,740 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.577004 seconds and try again... (tryings = 6, bot id = 5300290217)
+2024-03-07 12:10:23,635 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:10:23,636 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.204178 seconds and try again... (tryings = 7, bot id = 5300290217)
+2024-03-07 12:10:48,214 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:10:48,215 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.994815 seconds and try again... (tryings = 8, bot id = 5300290217)
+2024-03-07 12:11:12,533 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:11:12,537 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.938688 seconds and try again... (tryings = 9, bot id = 5300290217)
+2024-03-07 12:11:36,766 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:11:36,769 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.929107 seconds and try again... (tryings = 10, bot id = 5300290217)
+2024-03-07 12:12:01,014 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:12:01,020 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.023872 seconds and try again... (tryings = 11, bot id = 5300290217)
+2024-03-07 12:12:25,339 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:12:25,341 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.994283 seconds and try again... (tryings = 12, bot id = 5300290217)
+2024-03-07 12:12:49,672 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:12:49,676 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.007431 seconds and try again... (tryings = 13, bot id = 5300290217)
+2024-03-07 12:13:14,001 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:13:14,002 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.136433 seconds and try again... (tryings = 14, bot id = 5300290217)
+2024-03-07 12:13:38,442 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:13:38,443 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.717533 seconds and try again... (tryings = 15, bot id = 5300290217)
+2024-03-07 12:14:02,463 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:14:02,466 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.032486 seconds and try again... (tryings = 16, bot id = 5300290217)
+2024-03-07 12:14:26,799 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:14:26,802 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.975803 seconds and try again... (tryings = 17, bot id = 5300290217)
+2024-03-07 12:14:51,077 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:14:51,081 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.939693 seconds and try again... (tryings = 18, bot id = 5300290217)
+2024-03-07 12:15:15,324 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:15:15,327 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.043126 seconds and try again... (tryings = 19, bot id = 5300290217)
+2024-03-07 12:15:39,766 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:15:39,767 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.951932 seconds and try again... (tryings = 20, bot id = 5300290217)
+2024-03-07 12:16:04,043 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:16:04,046 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.078007 seconds and try again... (tryings = 21, bot id = 5300290217)
+2024-03-07 12:16:28,452 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:16:28,456 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.986690 seconds and try again... (tryings = 22, bot id = 5300290217)
+2024-03-07 12:16:52,747 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:16:52,751 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.149356 seconds and try again... (tryings = 23, bot id = 5300290217)
+2024-03-07 12:17:17,204 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:17:17,206 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.106887 seconds and try again... (tryings = 24, bot id = 5300290217)
+2024-03-07 12:17:41,608 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:17:41,611 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.916305 seconds and try again... (tryings = 25, bot id = 5300290217)
+2024-03-07 12:18:05,859 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:18:05,860 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.182079 seconds and try again... (tryings = 26, bot id = 5300290217)
+2024-03-07 12:18:30,346 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:18:30,347 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.982397 seconds and try again... (tryings = 27, bot id = 5300290217)
+2024-03-07 12:18:54,653 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:18:54,655 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.039989 seconds and try again... (tryings = 28, bot id = 5300290217)
+2024-03-07 12:19:18,998 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:19:19,001 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.028657 seconds and try again... (tryings = 29, bot id = 5300290217)
+2024-03-07 12:19:43,354 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:19:43,357 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.943157 seconds and try again... (tryings = 30, bot id = 5300290217)
+2024-03-07 12:20:07,619 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:20:07,624 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.096354 seconds and try again... (tryings = 31, bot id = 5300290217)
+2024-03-07 12:20:32,098 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:20:32,099 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.111416 seconds and try again... (tryings = 32, bot id = 5300290217)
+2024-03-07 12:20:56,569 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:20:56,571 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.127717 seconds and try again... (tryings = 33, bot id = 5300290217)
+2024-03-07 12:21:21,023 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:21:21,025 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.947097 seconds and try again... (tryings = 34, bot id = 5300290217)
+2024-03-07 12:21:45,265 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:21:45,269 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.940586 seconds and try again... (tryings = 35, bot id = 5300290217)
+2024-03-07 12:22:09,537 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:22:09,541 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.980292 seconds and try again... (tryings = 36, bot id = 5300290217)
+2024-03-07 12:22:33,837 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:22:33,840 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.061096 seconds and try again... (tryings = 37, bot id = 5300290217)
+2024-03-07 12:22:58,212 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:22:58,214 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.166513 seconds and try again... (tryings = 38, bot id = 5300290217)
+2024-03-07 12:23:22,703 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:23:22,705 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.023651 seconds and try again... (tryings = 39, bot id = 5300290217)
+2024-03-07 12:23:47,058 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:23:47,060 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.886131 seconds and try again... (tryings = 40, bot id = 5300290217)
+2024-03-07 12:24:11,255 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:24:11,257 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.140242 seconds and try again... (tryings = 41, bot id = 5300290217)
+2024-03-07 12:24:35,710 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:24:35,712 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.027170 seconds and try again... (tryings = 42, bot id = 5300290217)
+2024-03-07 12:25:00,042 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:25:00,043 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.867603 seconds and try again... (tryings = 43, bot id = 5300290217)
+2024-03-07 12:25:24,297 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:25:24,301 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.976153 seconds and try again... (tryings = 44, bot id = 5300290217)
+2024-03-07 12:25:48,606 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:25:48,609 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.089933 seconds and try again... (tryings = 45, bot id = 5300290217)
+2024-03-07 12:26:12,999 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:26:13,002 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.077573 seconds and try again... (tryings = 46, bot id = 5300290217)
+2024-03-07 12:26:37,395 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:26:37,398 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.971394 seconds and try again... (tryings = 47, bot id = 5300290217)
+2024-03-07 12:27:01,689 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:27:01,690 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.128601 seconds and try again... (tryings = 48, bot id = 5300290217)
+2024-03-07 12:27:26,134 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:27:26,138 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.050058 seconds and try again... (tryings = 49, bot id = 5300290217)
+2024-03-07 12:27:50,485 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:27:50,487 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.856510 seconds and try again... (tryings = 50, bot id = 5300290217)
+2024-03-07 12:28:14,670 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:28:14,670 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.998421 seconds and try again... (tryings = 51, bot id = 5300290217)
+2024-03-07 12:28:39,037 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:28:39,039 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.970020 seconds and try again... (tryings = 52, bot id = 5300290217)
+2024-03-07 12:29:03,319 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:29:03,322 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.802029 seconds and try again... (tryings = 53, bot id = 5300290217)
+2024-03-07 12:29:27,428 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:29:27,431 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.194820 seconds and try again... (tryings = 54, bot id = 5300290217)
+2024-03-07 12:29:51,955 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:29:51,957 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.880283 seconds and try again... (tryings = 55, bot id = 5300290217)
+2024-03-07 12:30:16,135 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:30:16,137 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.082159 seconds and try again... (tryings = 56, bot id = 5300290217)
+2024-03-07 12:30:40,608 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:30:40,611 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.025964 seconds and try again... (tryings = 57, bot id = 5300290217)
+2024-03-07 12:31:04,951 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:31:04,954 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.030001 seconds and try again... (tryings = 58, bot id = 5300290217)
+2024-03-07 12:31:29,282 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:31:29,284 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.897224 seconds and try again... (tryings = 59, bot id = 5300290217)
+2024-03-07 12:31:53,498 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:31:53,502 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.160423 seconds and try again... (tryings = 60, bot id = 5300290217)
+2024-03-07 12:32:17,987 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:32:17,990 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.022419 seconds and try again... (tryings = 61, bot id = 5300290217)
+2024-03-07 12:32:42,340 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:32:42,343 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.085901 seconds and try again... (tryings = 62, bot id = 5300290217)
+2024-03-07 12:33:06,747 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:33:06,750 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.912322 seconds and try again... (tryings = 63, bot id = 5300290217)
+2024-03-07 12:33:30,944 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:33:30,946 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.874814 seconds and try again... (tryings = 64, bot id = 5300290217)
+2024-03-07 12:33:55,134 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:33:55,135 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.887126 seconds and try again... (tryings = 65, bot id = 5300290217)
+2024-03-07 12:34:19,296 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:34:19,298 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.846622 seconds and try again... (tryings = 66, bot id = 5300290217)
+2024-03-07 12:34:43,430 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:34:43,431 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.971851 seconds and try again... (tryings = 67, bot id = 5300290217)
+2024-03-07 12:35:07,701 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:35:07,704 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.954085 seconds and try again... (tryings = 68, bot id = 5300290217)
+2024-03-07 12:35:31,959 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:35:31,962 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.926312 seconds and try again... (tryings = 69, bot id = 5300290217)
+2024-03-07 12:35:56,265 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:35:56,268 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.166028 seconds and try again... (tryings = 70, bot id = 5300290217)
+2024-03-07 12:36:20,738 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:36:20,741 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.020768 seconds and try again... (tryings = 71, bot id = 5300290217)
+2024-03-07 12:36:45,070 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:36:45,073 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.042418 seconds and try again... (tryings = 72, bot id = 5300290217)
+2024-03-07 12:37:09,451 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:37:09,455 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.124693 seconds and try again... (tryings = 73, bot id = 5300290217)
+2024-03-07 12:37:33,874 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:37:33,878 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.879224 seconds and try again... (tryings = 74, bot id = 5300290217)
+2024-03-07 12:37:58,060 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:37:58,062 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.049970 seconds and try again... (tryings = 75, bot id = 5300290217)
+2024-03-07 12:38:22,447 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:38:22,449 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.830509 seconds and try again... (tryings = 76, bot id = 5300290217)
+2024-03-07 12:38:46,572 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:38:46,574 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.030422 seconds and try again... (tryings = 77, bot id = 5300290217)
+2024-03-07 12:39:10,926 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:39:10,930 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.114625 seconds and try again... (tryings = 78, bot id = 5300290217)
+2024-03-07 12:39:35,346 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:39:35,349 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.091115 seconds and try again... (tryings = 79, bot id = 5300290217)
+2024-03-07 12:39:59,735 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:39:59,738 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.043539 seconds and try again... (tryings = 80, bot id = 5300290217)
+2024-03-07 12:40:24,074 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:40:24,076 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.926543 seconds and try again... (tryings = 81, bot id = 5300290217)
+2024-03-07 12:40:48,360 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:40:48,363 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.068529 seconds and try again... (tryings = 82, bot id = 5300290217)
+2024-03-07 12:41:12,789 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:41:12,790 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.801326 seconds and try again... (tryings = 83, bot id = 5300290217)
+2024-03-07 12:41:36,902 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:41:36,905 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.975224 seconds and try again... (tryings = 84, bot id = 5300290217)
+2024-03-07 12:42:01,149 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:42:01,152 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.135674 seconds and try again... (tryings = 85, bot id = 5300290217)
+2024-03-07 12:42:25,568 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:42:25,571 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.927221 seconds and try again... (tryings = 86, bot id = 5300290217)
+2024-03-07 12:42:49,847 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:42:49,850 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.931933 seconds and try again... (tryings = 87, bot id = 5300290217)
+2024-03-07 12:43:14,106 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:43:14,110 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.143205 seconds and try again... (tryings = 88, bot id = 5300290217)
+2024-03-07 12:43:38,557 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:43:38,559 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.052723 seconds and try again... (tryings = 89, bot id = 5300290217)
+2024-03-07 12:44:02,932 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:44:02,935 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.969067 seconds and try again... (tryings = 90, bot id = 5300290217)
+2024-03-07 12:44:27,216 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:44:27,218 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.019005 seconds and try again... (tryings = 91, bot id = 5300290217)
+2024-03-07 12:44:51,531 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:44:51,533 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.956931 seconds and try again... (tryings = 92, bot id = 5300290217)
+2024-03-07 12:45:15,808 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:45:15,811 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.904797 seconds and try again... (tryings = 93, bot id = 5300290217)
+2024-03-07 12:45:39,986 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:45:39,987 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.964981 seconds and try again... (tryings = 94, bot id = 5300290217)
+2024-03-07 12:46:04,339 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:46:04,341 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.206457 seconds and try again... (tryings = 95, bot id = 5300290217)
+2024-03-07 12:46:28,848 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:46:28,851 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.982732 seconds and try again... (tryings = 96, bot id = 5300290217)
+2024-03-07 12:46:53,127 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:46:53,131 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.200047 seconds and try again... (tryings = 97, bot id = 5300290217)
+2024-03-07 12:47:17,656 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:47:17,659 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.936223 seconds and try again... (tryings = 98, bot id = 5300290217)
+2024-03-07 12:47:41,890 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:47:41,893 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.067587 seconds and try again... (tryings = 99, bot id = 5300290217)
+2024-03-07 12:48:06,268 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:48:06,268 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.169524 seconds and try again... (tryings = 100, bot id = 5300290217)
+2024-03-07 12:48:30,737 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:48:30,740 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.002920 seconds and try again... (tryings = 101, bot id = 5300290217)
+2024-03-07 12:48:55,033 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:48:55,035 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.057242 seconds and try again... (tryings = 102, bot id = 5300290217)
+2024-03-07 12:49:19,375 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:49:19,376 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.025335 seconds and try again... (tryings = 103, bot id = 5300290217)
+2024-03-07 12:49:43,691 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:49:43,693 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.960639 seconds and try again... (tryings = 104, bot id = 5300290217)
+2024-03-07 12:50:07,939 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:50:07,942 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.809461 seconds and try again... (tryings = 105, bot id = 5300290217)
+2024-03-07 12:50:32,041 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:50:32,044 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.021945 seconds and try again... (tryings = 106, bot id = 5300290217)
+2024-03-07 12:50:56,436 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:50:56,439 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.132780 seconds and try again... (tryings = 107, bot id = 5300290217)
+2024-03-07 12:51:20,888 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:51:20,890 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.949239 seconds and try again... (tryings = 108, bot id = 5300290217)
+2024-03-07 12:51:45,167 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:51:45,170 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.938674 seconds and try again... (tryings = 109, bot id = 5300290217)
+2024-03-07 12:52:09,405 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:52:09,407 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.982769 seconds and try again... (tryings = 110, bot id = 5300290217)
+2024-03-07 12:52:33,732 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:52:33,733 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.967703 seconds and try again... (tryings = 111, bot id = 5300290217)
+2024-03-07 12:52:58,009 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:52:58,012 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.954115 seconds and try again... (tryings = 112, bot id = 5300290217)
+2024-03-07 12:53:22,253 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:53:22,257 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.954212 seconds and try again... (tryings = 113, bot id = 5300290217)
+2024-03-07 12:53:46,503 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:53:46,507 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.965666 seconds and try again... (tryings = 114, bot id = 5300290217)
+2024-03-07 12:54:10,798 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:54:10,801 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.135846 seconds and try again... (tryings = 115, bot id = 5300290217)
+2024-03-07 12:54:35,211 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:54:35,212 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.961330 seconds and try again... (tryings = 116, bot id = 5300290217)
+2024-03-07 12:54:59,484 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:54:59,487 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.191181 seconds and try again... (tryings = 117, bot id = 5300290217)
+2024-03-07 12:55:24,010 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:55:24,013 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.824290 seconds and try again... (tryings = 118, bot id = 5300290217)
+2024-03-07 12:55:48,177 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:55:48,180 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.037977 seconds and try again... (tryings = 119, bot id = 5300290217)
+2024-03-07 12:56:12,580 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:56:12,581 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.967136 seconds and try again... (tryings = 120, bot id = 5300290217)
+2024-03-07 12:56:36,858 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:56:36,859 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.116396 seconds and try again... (tryings = 121, bot id = 5300290217)
+2024-03-07 12:57:01,272 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:57:01,273 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.166094 seconds and try again... (tryings = 122, bot id = 5300290217)
+2024-03-07 12:57:25,768 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:57:25,769 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.985556 seconds and try again... (tryings = 123, bot id = 5300290217)
+2024-03-07 12:57:50,061 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:57:50,061 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.805407 seconds and try again... (tryings = 124, bot id = 5300290217)
+2024-03-07 12:58:14,184 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:58:14,185 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.103862 seconds and try again... (tryings = 125, bot id = 5300290217)
+2024-03-07 12:58:38,598 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:58:38,600 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.909835 seconds and try again... (tryings = 126, bot id = 5300290217)
+2024-03-07 12:59:02,811 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:59:02,812 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.142896 seconds and try again... (tryings = 127, bot id = 5300290217)
+2024-03-07 12:59:27,264 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2024-03-07 12:59:27,264 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.102687 seconds and try again... (tryings = 128, bot id = 5300290217)
+2024-03-07 12:59:32,379 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+2024-03-07 12:59:32,380 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 5.053874 seconds and try again... (tryings = 129, bot id = 5300290217)
+2024-03-07 12:59:37,444 - [ERROR] - aiogram.dispatcher - (dispatcher.py)._listen_updates(219) - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+2024-03-07 12:59:37,445 - [WARNING] - aiogram.dispatcher - (dispatcher.py)._listen_updates(221) - Sleep for 4.991607 seconds and try again... (tryings = 130, bot id = 5300290217)
+2024-03-07 14:17:01,690 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532668 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 99, in pure_answer
+    scan_logging(message.chat.id,answ[1],answ[6])
+IndexError: list index out of range
+2024-03-07 14:18:14,852 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532669 by bot id=5300290217
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 99, in pure_answer
+    scan_logging(message.chat.id,answ[1],answ[6])
+IndexError: list index out of range
+2024-03-07 14:58:14,411 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532671 by bot id=5300290217
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unexpected end tag at byte offset 101
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 63, in pure_answer
+    await message.answer(f'{msg}')
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unexpected end tag at byte offset 101
+2024-03-07 14:58:54,044 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532672 by bot id=5300290217
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unexpected end tag at byte offset 94
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 63, in pure_answer
+    await message.answer(f'{msg}')
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unexpected end tag at byte offset 94
+2024-03-07 15:00:52,392 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532673 by bot id=5300290217
+TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unexpected end tag at byte offset 94
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 63, in pure_answer
+    await message.answer(f'{msg}')
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\aiohttp.py", line 179, in make_request
+    response = self.check_response(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: can't parse entities: Unexpected end tag at byte offset 94
+2024-03-08 12:14:50,136 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532677 by bot id=5300290217
+TypeError: unhashable type: 'Image'
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 71, in pure_answer
+    scan_logging(message.chat.id,{imgs},{loc})
+TypeError: unhashable type: 'Image'
+2024-03-08 15:53:08,428 - [ERROR] - aiogram.event - (dispatcher.py)._process_update(315) - Cause exception while process update id=240532686 by bot id=5300290217
+TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiohttp\connector.py", line 992, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)
+  File "C:\Users\RU20046792\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "C:\Users\RU20046792\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "C:\Users\RU20046792\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "C:\Users\RU20046792\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 709, in sock_connect
+    return await self._proactor.connect(sock, address)
+  File "C:\Users\RU20046792\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 826, in _poll
+    value = callback(transferred, key, ov)
+  File "C:\Users\RU20046792\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 613, in finish_connect
+    ov.getresult()
+OSError: [WinError 121] Превышен таймаут семафора
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\aiohttp.py", line 171, in make_request
+    async with session.post(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiohttp\client.py", line 1194, in __aenter__
+    self._resp = await self._coro
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiohttp\client.py", line 578, in _request
+    conn = await self._connector.connect(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiohttp\connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiohttp\connector.py", line 911, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiohttp\connector.py", line 1235, in _create_direct_connection
+    raise last_exc
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiohttp\connector.py", line 1204, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiohttp\connector.py", line 1000, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\middlewire\middlewares.py", line 31, in __call__
+    result = await handler(event, data)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\RU20046792\Projects\Bot_sc_AIO3\handlers\different_types.py", line 52, in pure_answer
+    file_info = await bot_core.bot.get_file(message.photo[len(message.photo) - 1].file_id)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\bot.py", line 1707, in get_file
+    return await self(call, request_timeout=request_timeout)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\bot.py", line 441, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\base.py", line 257, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "c:\Users\RU20046792\Projects\Bot_sc_AIO3\.venv\lib\site-packages\aiogram\client\session\aiohttp.py", line 178, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]

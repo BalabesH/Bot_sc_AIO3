@@ -1,9 +1,11 @@
+import code
 from pyzbar import pyzbar
 import numpy as np
 import pandas.io.sql as sqlio
 import oracledb
+import psycopg2 as PG
 from misc.logging import logging
-from config.config import db_smart
+from config.config import db_smart, db_pgdev
 
 #########################CONNECT TO ORACLE########################################
 def SMART_connect():
@@ -16,18 +18,27 @@ def SMART_connect():
         logging.exception("Connection to DB EXA: Query error: {}".format(err))
     return con_exa
 
+def PG_connect():
+    try:
+        logging.info("Connection to DB PGSQL: Start")
+        con_pg = PG.connect(dbname=db_pgdev['dbname'], user=db_pgdev["user"], password=db_pgdev["pwd"], host=db_pgdev["host"])
+        logging.info("Connection to DB PGSQL: Done")
+    except PG.Error as err:
+        logging.exception("Connection to DB PGSQL: Query error: {}".format(err))
+    return con_pg
+
+
 #logging
 def scan_logging(user_id,dcode,shop):
-	con = SMART_connect()
+	con = PG_connect()
 	try:
 		with con.cursor() as cursor:
-			v_sql = f""" insert into BOT_SERVICE.bot_users_log (DT,USER_ID,BCODE,SHOP)
-						select
-						sysdate as DT,
-						{user_id} as USER_ID,
+			logging.info(f"Logging: {user_id} , {dcode} ,{shop}")
+			v_sql = f"""insert into chat_bot_prod.scbot_logs (DT,USER_ID,BCODE,SHOP)
+						select CURRENT_TIMESTAMP as DT,
+						'{user_id}' as USER_ID,
 						'{dcode}' as BCODE,
-						'{shop}' as SHOP
-						from dual"""
+						{shop} as SHOP"""
 			cursor.execute(v_sql)
 			con.commit()
 	except Exception as ex:
@@ -66,7 +77,7 @@ class SendData():
 						from BOT_SERVICE.BOT_PRC_ST_SLS
 						where (EAN = {bcode} or EAN =rpad(substr({bcode},-13,7),13,0))
 						and OBJECT_BK = '{loc}' """
-		return FetchData.f_get_info_AEM(df_check=FetchData.sql_to_df(sql_Check))
+		return FetchData.f_get_info_AEM(df_check=FetchData.sql_to_df(sql_Check)),bcode
 	#поиск инфы по EAN в SMART
 	def f_get_prc_bc(bcode,loc):
 		sql_Check = f"""select
@@ -110,7 +121,8 @@ class SendData():
 						k."Объём (в м3)",
 						k."Этикетка R1",
 						k."Этикетка R5",
-						k."Класс хранения"
+						k."Класс хранения",
+						k.load_dt AS "Время обновления данных"
 						FROM bot_service.dm_mdata_meti k
 						WHERE ART = {bcode} """
 		return FetchData.f_get_info_art(FetchData.sql_to_df(sql_Check))
@@ -128,7 +140,7 @@ class FetchData():
 	#EAN Data
 	def f_get_info_AEM(df_check):
 		if df_check.empty is True:
-			itog = "Штрихкод не найден!\nПроверь, правильно ввел ШК? \nЖду 8ми или 13ти значные. "
+			itog = "Штрихкод не найден!\nПроверь, правильно ввел ШК? \nЖду 8ми или 13ти значный код. "
 		else:
 			df_check.fillna('', inplace=True) #replace None values to 'space' in the dataframe
 			art = df_check.iloc [0]['Артикул']
@@ -141,8 +153,8 @@ class FetchData():
 			sts = df_check.iloc [0]['Статус']
 			mins = df_check.iloc [0]['Мин_сток']
 			inway = df_check.iloc [0]['В_пути']
-			itog ="<b>Артикул</b>:" + f" {art}\n"\
-					"<b>Штрихкод</b>:" + f" {shk}\n"\
+			itog ="<b>Артикул</b>:" + f" <code>{art}</code>\n"\
+					"<b>Штрихкод</b>:" + f" <code>{shk}</code>\n"\
 					"<b>Статус</b>:" + f" {sts}\n"\
 					"<b>Сток</b>:" + f" {stock}\n"\
 					"<b>Мин.Запас</b>:" + f" {mins}\n"\
@@ -182,9 +194,10 @@ class FetchData():
 			r1 = df_check.iloc[0]['Этикетка R1'].strip().lower()
 			r5 = df_check.iloc[0]['Этикетка R5'].strip().lower()
 			keep_cl = df_check.iloc[0]['Класс хранения'].strip()
+			update = df_check.iloc[0]['Время обновления данных']
 			itog =  "<b>Market</b>:" + f" {shop}\n"\
-					"<b>Артикул</b>:" + f" {art}\n"\
-					"<b>Наименование</b>:" + f" {artnm}\n"\
+					"<b>Артикул</b>:" + f" <code>{art}</code>\n"\
+					"<b>Наименование</b>:" + f"{artnm}\n"\
 					"<b>Отдел</b>:" + f" {mart}\n"\
 					"<b>Сегмент</b>:" + f" {seg}\n"\
 					"<b>Категория</b>:" + f" {cat}\n"\
@@ -202,20 +215,21 @@ class FetchData():
 					"<b>Высота (м)</b>:" + f" {height}\n"\
 					"<b>Длина (м)</b>:" + f" {length}\n"\
 					"<b>Ширина (м)</b>:" + f" {width}\n"\
-					"<b>Объём (в м3)</b>" + f" {volume}"\
+					"<b>Объём (в м3)</b>" + f" {volume}\n"\
 					"<b>R1</b>:" + f" {r1}\n"\
 					"<b>R5</b>:" + f" {r5}\n"\
-					"<b>Класс хранения</b>:" + f" {keep_cl}"
+					"<b>Класс хранения</b>:" + f" {keep_cl}\n"\
+					"<b>Дата обновления данных</b>:" +f" {update}"
 		return itog
 
 class Locations():
 	#take a loc from user_id
 	def f_get_loc(user_id):
-		con = SMART_connect()
+		con = PG_connect()
 		# logging.info("Select location data from user_id")
 		try:
 			with con.cursor() as cursor:
-				v_sql = f"""select LOCATION from BOT_SERVICE.setup_bot_users
+				v_sql = f"""select LOCATION from chat_bot_prod.setup_scbot_users
 							where USER_ID={user_id}"""
 				cursor.execute(v_sql)
 				ret = cursor.fetchall()
@@ -225,16 +239,26 @@ class Locations():
 	#change loc for user_id after fetch location'
 	def f_upd_loc(user_id,latitude,longitude):
 		logging.info(f"Get {latitude} and {longitude} from {user_id}")
-		con = SMART_connect()
+		con = PG_connect()
 		try:
 			with con.cursor() as cursor:
-				v_sql = f"""update BOT_SERVICE.setup_bot_users
-							set LOCATION =(select nvl((
-										select OBJECT_BK from dm.lu_obj_object
-										where LATITUDE like ''||substr({latitude},1,4)||'%'
-										and LONGITUDE like ''||substr({longitude},1,4)||'%'
-										and IS_ACTIVE=1),'001') from dual)
-							where USER_ID={user_id}"""
+				v_sql = f"""update chat_bot_prod.setup_scbot_users
+								set LOCATION =(select COALESCE((
+													select OBJECT_BK
+													from chat_bot_prod.lu_obj_object_cut
+													where cast(LATITUDE as text) like ''||substring(cast({latitude} as text),1,5)||'%'
+													and cast(LONGITUDE as text) like ''||substring(cast({longitude} as text),1,5)||'%'
+													and IS_ACTIVE=1)
+													,(select location from chat_bot_prod.setup_scbot_users where user_id = {user_id}),'001'))
+								where USER_ID={user_id}"""
+							#Old Oracle DML
+    						# f"""update BOT_SERVICE.setup_bot_users
+							# set LOCATION =(select nvl((
+							# 			select OBJECT_BK from dm.lu_obj_object
+							# 			where LATITUDE like ''||substr({latitude},1,4)||'%'
+							# 			and LONGITUDE like ''||substr({longitude},1,4)||'%'
+							# 			and IS_ACTIVE=1),'001') from dual)
+							# where USER_ID={user_id}"""
 				cursor.execute(v_sql)
 				con.commit()
 			logging.info(f"update for {user_id} - complete")

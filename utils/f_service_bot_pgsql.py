@@ -31,12 +31,12 @@ def PG_connect():
 #     message_id numeric,
 #     date_dt timestamp without time zone
 
-def f_logging(from_user_id, chat_id, chat_type, content_type, location, text_, message_id, date_dt):
+def f_logging(from_user_id, chat_id, chat_type, content_type, text_, message_id, date_dt, location_long = None, location_lat = None):
     logging.info("f_logging: Start")
     try:
         with PG_connect().cursor() as cursor:
             # metadata = jsonpickle.encode(message)
-            message = {"chat_id": chat_id, "chat_type": chat_type, "content type": content_type, "location": str(location)}
+            message = {"chat_id": chat_id, "chat_type": chat_type, "content type": content_type, "location_long": str(location_long), "location_lat": str(location_lat)}
             values = [
                 (from_user_id, json.dumps(message), text_, message_id, date_dt)
             ]
