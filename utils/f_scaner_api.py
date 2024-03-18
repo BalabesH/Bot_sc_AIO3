@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 import code
 from pyzbar import pyzbar
 import numpy as np
@@ -29,7 +30,7 @@ def PG_connect():
 
 
 #logging
-def scan_logging(user_id,dcode,shop):
+def scan_logging(user_id, shop, dcode='', art=''):
 	con = PG_connect()
 	try:
 		with con.cursor() as cursor:
@@ -38,6 +39,7 @@ def scan_logging(user_id,dcode,shop):
 						select CURRENT_TIMESTAMP as DT,
 						'{user_id}' as USER_ID,
 						'{dcode}' as BCODE,
+						'{art}'
 						{shop} as SHOP"""
 			cursor.execute(v_sql)
 			con.commit()
@@ -163,7 +165,7 @@ class FetchData():
 					"<b>Юнит</b>:" + f" {unt}\n"\
 					"<b>Цена</b>:" + f" {prc}\n"\
 					"<b>Магазин</b>:" + f" {shop}"
-		return itog
+		return itog, art
 	#Article Data
 	def f_get_info_art(df_check):
 		if df_check.empty is True:

@@ -72,13 +72,11 @@ async def pure_answer(message: Message):
         msg, bcode = SendData.f_get_prc(imgs, f'{loc}')
         await message.answer(f'{msg}')
         #os.remove(src)
-        print(msg)
         answ = msg.strip().split('\n')
-        print(answ)
         if answ[0] == 'Штрихкод не найден!\nПопробуй сделать другое фото или отправь ШК сообщением.':
             return
         else:
-            scan_logging(user_id=message.chat.id,dcode=bcode,shop=loc)
+            scan_logging(user_id=message.chat.id, dcode=bcode, shop=loc)
             logging.info(f"Получил файл и обработал")
         f_logging(from_user_id=message.from_user.id, chat_id=message.chat.id,
               chat_type=message.chat.type, content_type=message.content_type,
@@ -91,9 +89,17 @@ async def pure_answer(message: Message):
                 logging.info('The text is a barcode')
                 loc = Locations.f_get_loc(message.chat.id)
                 await message.reply('Получаю информацию по EAN...')
-                msg = SendData.f_get_prc_bc(message.text,f'{loc}')
+                lst = SendData.f_get_prc_bc(message.text,f'{loc}')
+                #TODO Code of logging art and dcode and find how to deactivate previous button
+                msg, artic = lst[0], lst[1]
                 logging.info('Answer for barcode was created')
                 await message.answer(f'{msg}')
+                answ = msg.strip().split('\n')
+                if answ[0] == 'EAN не найден!\nПроверь':
+                    return
+                else:
+                    scan_logging(message.chat.id,dcode=message.text, art=artic, shop=loc)
+                    # scan_logging(message.chat.id,answ[1],answ[6])
             ########Обработка артикула############
             elif (len(message.text) <=6):
                 logging.info('The text is article')
@@ -101,13 +107,14 @@ async def pure_answer(message: Message):
                 await message.reply('Получаю информацию по артикулу...')
                 msg = SendData.f_get_prc_ar(message.text)
                 logging.info('Answer for article is done')
-                await message.answer(f'{msg}', parse_mode= ParseMode.HTML)
-            answ = msg.strip().split('\n')
-            if answ[0] == 'Штрихкод не найден!\nПроверь':
-                return
-            else:
-                scan_logging(message.chat.id,message.text,loc)
-                # scan_logging(message.chat.id,answ[1],answ[6])
+                await message.answer(f'{msg}')
+                # await message.answer(f'{msg}', parse_mode= ParseMode.HTML)
+                answ = msg.strip().split('\n')
+                if answ[0] == 'Артикул не найден!\nПроверь':
+                    return
+                else:
+                    scan_logging(message.chat.id,art=message.text,shop=loc)
+                    # scan_logging(message.chat.id,answ[1],answ[6])
         else:
             await message.answer(f"""Код артикула/штрих-кода не распознан, проверьте правильность кода и попробуйте снова""")
         f_logging(from_user_id=message.from_user.id, chat_id=message.chat.id,
